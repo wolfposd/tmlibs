@@ -8,12 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var (
-	cmap = NewCMap()
-)
-
 func TestIterateKeysWithValues(t *testing.T) {
-	cmap.Clear()
+	cmap := NewCMap()
 
 	for i := 1; i <= 10; i++ {
 		cmap.Set(fmt.Sprintf("key%d", i), fmt.Sprintf("value%d", i))
@@ -44,7 +40,7 @@ func TestIterateKeysWithValues(t *testing.T) {
 }
 
 func TestContains(t *testing.T) {
-	cmap.Clear()
+	cmap := NewCMap()
 
 	cmap.Set("key1", "value1")
 
